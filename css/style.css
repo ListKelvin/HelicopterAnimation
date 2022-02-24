@@ -1,0 +1,225 @@
+.helicopter {
+  -webkit-animation: bounce 5s infinite;
+          animation: bounce 5s infinite;
+}
+
+.helicopter .main-small {
+  position: absolute;
+  left: 460px;
+  top: 38px;
+  width: 50px;
+  height: 50px;
+  z-index: 0;
+  border-radius: 50%;
+  background: #302e37;
+}
+
+.helicopter .tail {
+  position: absolute;
+  top: 50px;
+  left: 150px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  border-top: 10px solid transparent;
+  border-bottom: 80px solid transparent;
+  border-left: 350px solid #2fadd2;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 10px;
+}
+
+.helicopter .main {
+  position: absolute;
+  left: 130px;
+  top: -10px;
+  width: 40px;
+  height: 20px;
+  background: #302e37;
+}
+
+.helicopter .cockpit {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  width: 195px;
+  height: 195px;
+  border-radius: 100px 40px 50px 50px;
+  background-color: #44d2fd;
+}
+
+.helicopter .cockpit::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  left: -25px;
+  width: 170px;
+  height: 170px;
+  border-radius: 40px;
+  background-color: #302e37;
+}
+
+.helicopter .cockpit::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -60px;
+  left: -60px;
+  width: 170px;
+  height: 170px;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.helicopter .rotor {
+  width: 700px;
+  height: 700px;
+  border-radius: 350px;
+  position: absolute;
+  top: -360px;
+  left: -200px;
+  z-index: 2;
+  overflow: hidden;
+  background-color: #a299ab;
+  opacity: 0.12;
+  -webkit-transform: scaleY(0.075);
+          transform: scaleY(0.075);
+}
+
+.helicopter .rotor .rotator {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border-radius: 350px;
+  -webkit-animation: rotate 0.6s linear infinite;
+          animation: rotate 0.6s linear infinite;
+}
+
+.helicopter .rotor .rotator div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -350px;
+  margin-top: -30px;
+  width: 700px;
+  height: 80px;
+  background-color: #fff;
+}
+
+.helicopter .rotor .rotator div:first-child {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.helicopter .rotor .rotator div:last-child {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.helicopter .rotor-2 {
+  width: 200px;
+  height: 200px;
+  border-radius: 350px;
+  position: absolute;
+  top: -60px;
+  left: 383px;
+  z-index: 2;
+  overflow: hidden;
+  background-color: #a299ab;
+  opacity: 0.12;
+  -webkit-transform: scaleY(0.2);
+          transform: scaleY(0.2);
+}
+
+.helicopter .rotor-2 .rotator-2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 350px;
+  -webkit-animation: rotate 0.4s linear infinite;
+          animation: rotate 0.4s linear infinite;
+}
+
+.helicopter .rotor-2 .rotator-2 div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -350px;
+  margin-top: -30px;
+  width: 700px;
+  height: 40px;
+  background-color: #fff;
+}
+
+.helicopter .rotor-2 .rotator-2 div:first-child {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.helicopter .rotor-2 .rotator-2 div:last-child {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translate(0px, -50px);
+            transform: translate(0px, -50px);
+  }
+  50% {
+    -webkit-transform: translate(0px, 50px);
+            transform: translate(0px, 50px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translate(0px, -50px);
+            transform: translate(0px, -50px);
+  }
+  50% {
+    -webkit-transform: translate(0px, 50px);
+            transform: translate(0px, 50px);
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 70vh;
+  width: 70vw;
+  -webkit-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+/*# sourceMappingURL=style.css.map */
